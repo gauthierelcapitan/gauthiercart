@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Stop execution if the last command in a pipeline has an error
+set -e
+
+# shellcheck disable=SC2155
+declare -r CURRENT_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+declare -r PROJECT_PATH=${CURRENT_PATH}/..
+declare -r DOCKER_PATH=${PROJECT_PATH}/docker
+
+# Load env variables
+. "${PROJECT_PATH}"/.env
+
+# Check if ${ENV} is valid
+if [[ ! -d ${DOCKER_PATH}/${ENV} ]] ; then
+  printf "Unknown environment '%s'\n" "${ENV}"
+  printf "\nChecking if the following directories/files exists:\n"
+  printf "  * %s/%s;\n" "${DOCKER_PATH}" "${ENV}"
+  exit 1
+fi
+
+# Start Docker containers in the background and leaves them running
+
+printf "Starting Gauthier Cart [%s] environment\n" "${ENV}"
+
+NGINX_CERTS_DIR=${DOCKER_DATA}/${COMPOSE_PROJECT_NAME}_nginx-certs
+
+# Sync Nginx certs
+mkdir -p ${NGINX_CERTS_DIR}
+cp ${PROJECT_PATH}/config/nginx/certs/* ${NGINX_CERTS_DIR}
+
+docker-compose up -d nginx-proxy front
+
+i=0
+while [ $i -lt 10 ]
+do
+  printf "."
+  ((i+=1))
+  sleep 1
+done
+
+printf "\n\n"
+docker-compose ps
