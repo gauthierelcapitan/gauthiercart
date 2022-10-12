@@ -1,0 +1,114 @@
+/**
+ * Sans font : JetBrains Sans
+ **/
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'JetBrains Sans';
+    src: url('/fonts/sans/JetBrainsSans-Light.woff2') format("woff2"),
+    url('/fonts/sans/JetBrainsSans-Light.woff') format("woff");
+    font-weight: 300;
+    font-style: normal
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'JetBrains Sans';
+    src: url('/fonts/sans/JetBrainsSans-Regular.woff2') format("woff2"),
+    url('/fonts/sans/JetBrainsSans-Regular.woff') format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'JetBrains Sans';
+    src: url('/fonts/sans/JetBrainsSans-SemiBold.woff2') format("woff2"),
+    url('/fonts/sans/JetBrainsSans-SemiBold.woff') format("woff");
+    font-weight: 600;
+    font-style: normal
+}
+
+@supports (font-variation-settings: normal) {
+    /*noinspection CssUnknownTarget*/
+    @font-face {
+        font-family:'JetBrains Sans';
+        src: url('/fonts/sans/JetBrainsSans.woff2') format("woff2 supports variations"),
+        url('/fonts/sans/JetBrainsSans.woff2') format("woff2-variations"),
+        url('/fonts/sans/JetBrainsSans.woff2') format("woff-variations");
+        font-weight: 100 900;
+        font-style: normal
+    }
+}
+
+/**
+ * Serif font : Computer Modern Serif
+ **/
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'Computer Modern Serif';
+    src: url('/fonts/serif/cmunrm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'Computer Modern Serif';
+    src: url('/fonts/serif/cmunbx.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'Computer Modern Serif';
+    src: url('/fonts/serif/cmunti.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'Computer Modern Serif';
+    src: url('/fonts/serif/cmunbi.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/**
+ * Mono font : MonoLisa
+ **/
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'MonoLisa';
+    src: url('/fonts/mono/MonoLisa-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'MonoLisa';
+    src: url('/fonts/mono/MonoLisa-Bold.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'MonoLisa';
+    src: url('/fonts/mono/MonoLisa-RegularItalic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/*noinspection CssUnknownTarget*/
+@font-face {
+    font-family: 'MonoLisa';
+    src: url('/fonts/mono/MonoLisa-BoldItalic.ttf') format('ttf');
+    font-weight: bold;
+    font-style: italic;
+}

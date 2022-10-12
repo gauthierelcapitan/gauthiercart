@@ -1,3 +1,5 @@
+@import "fonts.css";
+
 html,
 body {
   padding: 0;
@@ -28,3 +30,4 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+

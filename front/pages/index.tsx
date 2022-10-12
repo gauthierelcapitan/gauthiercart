@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
@@ -7,13 +8,30 @@ const Home: NextPage = () => {
       <Head>
         <title>Gauthier Cart</title>
         <meta name="description" content="Gauthier Cart" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="text-3xl font-bold underline">
-          Under construction
-        </h1>
+          <div className="bg-gradient-to-tr from-rose-500 to-california-400 relative h-screen w-screen">
+              <Image
+                  className="absolute inset-0 w-full h-full object-cover mix-blend-multiply filter brightness-50"
+                  layout="fill"
+                  objectFit="cover"
+                  quality={100}
+                  src="/mont-blanc.jpg"
+                  alt="Toto"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
+                   <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
+                       Gauthier Cart
+                   </h1>
+                   <div className="space-y-8">
+
+                   <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
+                       Website under construction.
+                   </p>
+                   </div>
+              </div>
+          </div>
       </main>
 
       <footer>
