@@ -1,8 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+import mountains from '../public/mont-blanc.jpg'
+
+const DynamicFog = dynamic(() => import('../components/fog'), {
+    ssr: false,
+})
 
 const Home: NextPage = () => {
+
   return (
     <div>
       <Head>
@@ -17,9 +24,11 @@ const Home: NextPage = () => {
                   layout="fill"
                   objectFit="cover"
                   quality={100}
-                  src="/mont-blanc.jpg"
+                  src={mountains}
                   alt="Toto"
+                  placeholder="blur"
               />
+              <DynamicFog />
               <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
                    <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
                        Gauthier Cart
