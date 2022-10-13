@@ -5,9 +5,20 @@ export default function Fog() {
   const refContainer = useRef<HTMLDivElement>(null);
   const [renderer, setRenderer] = useState<THREE.WebGLRenderer>();
 
+  const initializedRef = useRef<boolean>(false);
+
+  const handleResize = () => {
+    console.log();
+  };
+
+  useEffect(() => {
+    return () => window.removeEventListener('resize', handleResize);
+  });
+
   useEffect(() => {
     const { current: container } = refContainer;
-    if (container && !renderer) {
+    if (container && !renderer && !initializedRef.current) {
+      initializedRef.current = true;
       let delta: number;
       const clock = new THREE.Clock();
       const scW = container.clientWidth;
@@ -21,6 +32,7 @@ export default function Fog() {
       renderer.outputEncoding = THREE.sRGBEncoding;
 
       container.appendChild(renderer.domElement);
+
       setRenderer(renderer);
 
       const scene = new THREE.Scene();
@@ -28,8 +40,6 @@ export default function Fog() {
       const camera = new THREE.PerspectiveCamera(75, scW / scH, 1, 10000);
       camera.position.z = 1000;
       scene.add(camera);
-
-      THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
 
       const light = new THREE.DirectionalLight(0xffffff, 1);
       light.position.set(-1, 0, 1);

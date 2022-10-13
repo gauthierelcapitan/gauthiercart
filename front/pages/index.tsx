@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
+import { Parallax } from 'react-scroll-parallax';
 
 import mountains from '../public/mont-blanc.jpg';
 
@@ -30,14 +31,18 @@ const Home: NextPage = () => {
           />
           <DynamicFog />
           <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
-            <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
-              Gauthier Cart
-            </h1>
-            <div className="space-y-8">
-              <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
-                Website under construction.
-              </p>
-            </div>
+            <Parallax speed={-5}>
+              <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
+                Gauthier Cart
+              </h1>
+            </Parallax>
+            <Parallax speed={5}>
+              <div className="space-y-8">
+                <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
+                  Website under construction.
+                </p>
+              </div>
+            </Parallax>
           </div>
         </div>
       </main>
