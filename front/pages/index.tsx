@@ -45,7 +45,7 @@ const Home: NextPage = () => {
           content="Gauthier Cart Senior Software Engineer"
         />
       </Head>
-      <main className="overflow-y-hidden">
+      <main className="overflow-x-hidden">
         <header>
           <Navbar menuLeft={menuLeft} menuRight={menuRight} />
         </header>
