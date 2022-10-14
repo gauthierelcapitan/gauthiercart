@@ -1,7 +1,6 @@
 import Container from '@gauthiercart/design-system/Container/Container';
 import { Icon } from '@gauthiercart/design-system/Icon/Icon';
 import { Disclosure } from '@headlessui/react';
-import Link from 'next/link';
 import React, { FC, memo } from 'react';
 
 import NavbarItem, { NavbarItemProps } from './NavBarItem';
@@ -13,6 +12,13 @@ interface NavbarProps {
 
 const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
   const menuMobile = [...menuLeft, ...menuRight];
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <Container>
@@ -30,12 +36,10 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
                     />
                   ))}
                 </div>
-                <div className="flex justify-between items-center w-full md:w-auto">
-                  <Link href="/">
-                    <a className="w-12">
-                      <Icon variant="iceAxe" height={100} width={35} />
-                    </a>
-                  </Link>
+                <div className="flex justify-between items-center w-full md:w-auto cursor-pointer">
+                  <div onClick={scrollToTop} className="w-12">
+                    <Icon variant="iceAxe" height={100} width={35} />
+                  </div>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
                     className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-white-500 focus:outline-none"

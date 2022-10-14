@@ -4,7 +4,7 @@ import { Head, Html, Main, NextScript } from 'next/document';
 export default function Document() {
   // noinspection HtmlRequiredTitleElement,HtmlUnknownTarget
   return (
-    <Html>
+    <Html lang="en">
       <Head>
         <link
           rel="apple-touch-icon"
