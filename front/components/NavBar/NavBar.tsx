@@ -2,16 +2,13 @@ import Container from '@gauthiercart/design-system/Container/Container';
 import { Icon } from '@gauthiercart/design-system/Icon/Icon';
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React, { FC, RefObject } from 'react';
+import React, { FC, memo } from 'react';
 
-interface NavbarItem {
-  label: string;
-  ref: RefObject<HTMLDivElement>;
-}
+import NavbarItem, { NavbarItemProps } from './NavBarItem';
 
 interface NavbarProps {
-  menuLeft: NavbarItem[];
-  menuRight: NavbarItem[];
+  menuLeft: NavbarItemProps[];
+  menuRight: NavbarItemProps[];
 }
 
 const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
@@ -25,32 +22,23 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
             <>
               <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
                 <div className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
-                  {menuLeft.map(({ label, ref }) => (
-                    <div
+                  {menuLeft.map(({ label, sectionRef }) => (
+                    <NavbarItem
                       key={label}
-                      onClick={() =>
-                        ref.current?.scrollIntoView({ behavior: 'smooth' })
-                      }
-                      className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black"
-                    >
-                      {label}
-                    </div>
+                      label={label}
+                      sectionRef={sectionRef}
+                    />
                   ))}
                 </div>
                 <div className="flex justify-between items-center w-full md:w-auto">
                   <Link href="/">
-                    <a className="w-12 dark:hidden">
-                      <Icon variant="iceAxe" height={60} width={20} />
-                    </a>
-                  </Link>
-                  <Link href="/">
-                    <a className="hidden w-12 dark:block">
-                      <Icon variant="iceAxe" height={120} width={40} />
+                    <a className="w-12">
+                      <Icon variant="iceAxe" height={100} width={35} />
                     </a>
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-white-500 focus:outline-none dark:text-gray-300 "
+                    className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-white-500 focus:outline-none"
                   >
                     <svg
                       className="w-6 h-6 fill-current"
@@ -75,31 +63,23 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
                 </div>
 
                 <div className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
-                  {menuRight.map(({ label, ref }) => (
-                    <div
+                  {menuRight.map(({ label, sectionRef }) => (
+                    <NavbarItem
                       key={label}
-                      onClick={() =>
-                        ref.current?.scrollIntoView({ behavior: 'smooth' })
-                      }
-                      className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black"
-                    >
-                      {label}
-                    </div>
+                      label={label}
+                      sectionRef={sectionRef}
+                    />
                   ))}
                 </div>
               </div>
               <Disclosure.Panel>
                 <div className="flex flex-col items-center justify-start order-2 w-full md:hidden">
-                  {menuMobile.map(({ label, ref }) => (
-                    <div
+                  {menuMobile.map(({ label, sectionRef }) => (
+                    <NavbarItem
                       key={label}
-                      onClick={() =>
-                        ref.current?.scrollIntoView({ behavior: 'smooth' })
-                      }
-                      className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black"
-                    >
-                      {label}
-                    </div>
+                      label={label}
+                      sectionRef={sectionRef}
+                    />
                   ))}
                 </div>
               </Disclosure.Panel>
@@ -131,4 +111,4 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
   );
 };
 
-export default NavBar;
+export default memo(NavBar);

@@ -1,5 +1,6 @@
 import CloudyNoSSR from '@gauthiercart/components/Cloudy/CloudyNoSSR';
 import Navbar from '@gauthiercart/components/NavBar/NavBar';
+import { NavbarItemProps } from '@gauthiercart/components/NavBar/NavBarItem';
 import aiguilleDuGouter from '@gauthiercart/public/images/aiguille-du-gouter.jpg';
 import aiguilleVerte from '@gauthiercart/public/images/aiguille-verte.jpg';
 import deleveret from '@gauthiercart/public/images/deleveret.jpg';
@@ -16,33 +17,36 @@ const Home: NextPage = () => {
   const portfolioRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-  const menuLeft = [
+  const menuLeft: NavbarItemProps[] = [
     {
       label: 'About',
-      ref: aboutRef,
+      sectionRef: aboutRef,
     },
     {
       label: 'Skills',
-      ref: skillsRef,
+      sectionRef: skillsRef,
     },
   ];
 
-  const menuRight = [
+  const menuRight: NavbarItemProps[] = [
     {
       label: 'Portfolio',
-      ref: portfolioRef,
+      sectionRef: portfolioRef,
     },
     {
       label: 'Contact',
-      ref: contactRef,
+      sectionRef: contactRef,
     },
   ];
 
   return (
     <div>
       <Head>
-        <title>Gauthier Cart</title>
-        <meta name="description" content="Gauthier Cart" />
+        <title>Gauthier Cart | Senior Software Engineer</title>
+        <meta
+          name="description"
+          content="Gauthier Cart Senior Software Engineer"
+        />
       </Head>
       <main>
         <header>
