@@ -2,20 +2,19 @@ import Container from '@gauthiercart/design-system/Container/Container';
 import { Icon } from '@gauthiercart/design-system/Icon/Icon';
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
-import React, {FC, RefObject } from 'react';
+import React, { FC, RefObject } from 'react';
 
 interface NavbarItem {
-    label: string
-    ref: RefObject<HTMLDivElement>
+  label: string;
+  ref: RefObject<HTMLDivElement>;
 }
 
 interface NavbarProps {
-    menuRight: NavbarItem[]
-    menuLeft: NavbarItem[]
+  menuLeft: NavbarItem[];
+  menuRight: NavbarItem[];
 }
 
-const NavBar: FC<NavbarProps> = ({menuLeft, menuRight}) => {
-
+const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
   const menuMobile = [...menuLeft, ...menuRight];
 
   return (
@@ -26,10 +25,16 @@ const NavBar: FC<NavbarProps> = ({menuLeft, menuRight}) => {
             <>
               <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
                 <div className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
-                  {menuLeft.map(({label, ref}) => (
-                      <div onClick={() => ref.current?.scrollIntoView({behavior: "smooth"})} className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black">
-                        {label}
-                      </div>
+                  {menuLeft.map(({ label, ref }) => (
+                    <div
+                      key={label}
+                      onClick={() =>
+                        ref.current?.scrollIntoView({ behavior: 'smooth' })
+                      }
+                      className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black"
+                    >
+                      {label}
+                    </div>
                   ))}
                 </div>
                 <div className="flex justify-between items-center w-full md:w-auto">
@@ -70,19 +75,31 @@ const NavBar: FC<NavbarProps> = ({menuLeft, menuRight}) => {
                 </div>
 
                 <div className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
-                  {menuRight.map(({label, ref}) => (
-                      <div onClick={() => ref.current?.scrollIntoView({behavior: "smooth"})} className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black">
-                  {label}
-                      </div>
-                      ))}
+                  {menuRight.map(({ label, ref }) => (
+                    <div
+                      key={label}
+                      onClick={() =>
+                        ref.current?.scrollIntoView({ behavior: 'smooth' })
+                      }
+                      className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black"
+                    >
+                      {label}
+                    </div>
+                  ))}
                 </div>
               </div>
               <Disclosure.Panel>
                 <div className="flex flex-col items-center justify-start order-2 w-full md:hidden">
-                  {menuMobile.map(({label, ref}) => (
-                      <div onClick={() => ref.current?.scrollIntoView({behavior: "smooth"})} className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black">
-                        {label}
-                      </div>
+                  {menuMobile.map(({ label, ref }) => (
+                    <div
+                      key={label}
+                      onClick={() =>
+                        ref.current?.scrollIntoView({ behavior: 'smooth' })
+                      }
+                      className="px-5 py-2 text-xl font-mono font-medium text-gray-600 dark:text-gray-400 hover:text-white link link-underline link-underline-black"
+                    >
+                      {label}
+                    </div>
                   ))}
                 </div>
               </Disclosure.Panel>
@@ -112,6 +129,6 @@ const NavBar: FC<NavbarProps> = ({menuLeft, menuRight}) => {
       </style>
     </Container>
   );
-}
+};
 
-export default NavBar
+export default NavBar;

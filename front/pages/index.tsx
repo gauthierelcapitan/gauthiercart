@@ -1,3 +1,4 @@
+import CloudyNoSSR from '@gauthiercart/components/Cloudy/CloudyNoSSR';
 import Navbar from '@gauthiercart/components/NavBar/NavBar';
 import aiguilleDuGouter from '@gauthiercart/public/images/aiguille-du-gouter.jpg';
 import aiguilleVerte from '@gauthiercart/public/images/aiguille-verte.jpg';
@@ -6,40 +7,36 @@ import dentDuGeant from '@gauthiercart/public/images/dent-du-geant.jpg';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRef } from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import {useRef} from "react";
-import CloudyNoSSR from "@gauthiercart/components/Cloudy/CloudyNoSSR";
-
-
 
 const Home: NextPage = () => {
-
-  const aboutRef = useRef<HTMLDivElement>(null)
-  const skillsRef = useRef<HTMLDivElement>(null)
-  const portfolioRef = useRef<HTMLDivElement>(null)
-  const contactRef = useRef<HTMLDivElement>(null)
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const portfolioRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
 
   const menuLeft = [
     {
-      label : "About",
+      label: 'About',
       ref: aboutRef,
     },
     {
-      label : "Skills",
+      label: 'Skills',
       ref: skillsRef,
-    }
-  ]
+    },
+  ];
 
   const menuRight = [
     {
-      label : "Portfolio",
+      label: 'Portfolio',
       ref: portfolioRef,
     },
     {
-      label : "Contact",
+      label: 'Contact',
       ref: contactRef,
-    }
-  ]
+    },
+  ];
 
   return (
     <div>
@@ -49,9 +46,12 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <header>
-          <Navbar menuLeft={menuLeft} menuRight={menuRight}  />
+          <Navbar menuLeft={menuLeft} menuRight={menuRight} />
         </header>
-        <div ref={aboutRef} className="bg-gradient-to-tr from-rose-500 to-california-400 relative h-screen w-screen">
+        <div
+          ref={aboutRef}
+          className="bg-gradient-to-tr from-rose-500 to-california-400 relative h-screen w-screen"
+        >
           <Image
             className="absolute inset-0 w-full h-full object-cover mix-blend-multiply filter brightness-50"
             layout="fill"
@@ -81,8 +81,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-
-        <div ref={skillsRef} className="bg-gradient-to-tr from-orange-300 to-indigo-500 relative h-screen w-screen">
+        <div
+          ref={skillsRef}
+          className="bg-gradient-to-tr from-orange-300 to-indigo-500 relative h-screen w-screen"
+        >
           <Image
             className="absolute inset-0 w-full h-full object-cover mix-blend-multiply filter brightness-50"
             layout="fill"
@@ -108,7 +110,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div ref={portfolioRef} className="bg-gradient-to-tr from-orange-300 to-indigo-500 relative h-screen w-screen">
+        <div
+          ref={portfolioRef}
+          className="bg-gradient-to-tr from-orange-300 to-indigo-500 relative h-screen w-screen"
+        >
           <Image
             className="absolute inset-0 w-full h-full object-cover mix-blend-multiply filter brightness-50"
             layout="fill"
@@ -134,7 +139,10 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div ref={contactRef} className="bg-gradient-to-tr from-orange-300 to-indigo-500 relative h-screen w-screen">
+        <div
+          ref={contactRef}
+          className="bg-gradient-to-tr from-orange-300 to-indigo-500 relative h-screen w-screen"
+        >
           <Image
             className="absolute inset-0 w-full h-full object-cover mix-blend-multiply filter brightness-50"
             layout="fill"
@@ -160,7 +168,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <footer/>
+      <footer />
     </div>
   );
 };

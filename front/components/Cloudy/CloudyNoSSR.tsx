@@ -1,11 +1,11 @@
-import dynamic from "next/dynamic";
+import dynamic from 'next/dynamic';
 
 const DynamicCloudy = dynamic(() => import('./Cloudy'), {
-    ssr: false,
+  ssr: false,
 });
 
 const CloudyNoSSR = () => {
-    return <DynamicCloudy />
-}
+  return <DynamicCloudy />;
+};
 
-export default CloudyNoSSR
+export default CloudyNoSSR;
