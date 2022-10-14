@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Stop execution if the last command in a pipeline has an error
+set -e
+
+# shellcheck disable=SC2155
+declare -r CURRENT_PATH=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+declare -r PROJECT_PATH=${CURRENT_PATH}/../..
+
+# Load env variables
+. "${PROJECT_PATH}"/.env
+
+# Copy frontend container node_modules directory to the host
+# shellcheck disable=SC2046
+docker cp $(docker-compose ps -q front):/app/node_modules ./../front
