@@ -25,13 +25,13 @@ const About: FC<SectionProps> = ({ sectionRef }) => {
       <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
         <div className="rounded-full bg-white/10 backdrop-blur border-4 border-rose-500 p-1">
           <Image
-              className="rounded-full"
-              src={gauthierProfessional}
-              quality={100}
-              alt="Gauthier Cart"
-              placeholder="blur"
-              width={150}
-              height={150}
+            className="rounded-full"
+            src={gauthierProfessional}
+            quality={100}
+            alt="Gauthier Cart"
+            placeholder="blur"
+            width={150}
+            height={150}
           />
         </div>
         <Parallax speed={-10}>
