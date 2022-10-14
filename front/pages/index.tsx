@@ -39,7 +39,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Gauthier Cart | Senior Software Engineer</title>
+        <title>Gauthier Cart | Software Engineer</title>
         <meta
           name="description"
           content="Gauthier Cart Senior Software Engineer"
