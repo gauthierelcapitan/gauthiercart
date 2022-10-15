@@ -3,6 +3,7 @@ import 'swiper/css/effect-flip';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import gauthierProfessional from '@gauthiercart/public/images/gauthier-professional.png';
 import Image from 'next/image';
 import { Autoplay, EffectFlip } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -25,7 +26,7 @@ const AboutPhoto = () => {
             <SwiperSlide>
               <Image
                 className="rounded-full"
-                src="/images/gauthier-professional.png"
+                src={gauthierProfessional}
                 quality={100}
                 alt="Gauthier Cart"
                 width={160}
