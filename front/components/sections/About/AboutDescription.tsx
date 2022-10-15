@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { memo } from 'react';
 
 const AboutDescription = () => {
@@ -10,18 +11,28 @@ const AboutDescription = () => {
         Senior Software Engineer
       </h2>
 
-      <div className="font-sans max-w-7xl mx-auto grid grid-cols-12 text-xl sm:text-2xl md:text-3xl mb-10">
-        <div className="col-span-4">
-          <span className="font-mono">34</span> Y/o
+      <div className="font-sans max-w-7xl mx-auto grid grid-cols-12 text-2xl sm:text-3xl md:text-4xl mb-10">
+        <div className="col-span-6 hover:text-rose-500 hover:underline hover:underline-offset-4">
+          <Link href="https://utmb.world/runner/265957.gauthier.cart">
+            <a target="_blank" rel="noopener noreferrer">
+              <span className="font-mono">34</span> Y/o
+            </a>
+          </Link>
         </div>
-        <div className="col-span-4">
-          <span className="font-mono">10+</span> YEX in IT
+        <div className="col-span-6 hover:text-rose-500 hover:underline hover:underline-offset-4">
+          <Link href="/files/curriculum-vitae-gauthier.pdf">
+            <a target="_blank" rel="noopener noreferrer">
+              <span className="font-mono">10+</span> YEX
+            </a>
+          </Link>
         </div>
-        <div className="col-span-4">Fullstack</div>
       </div>
-
-      <h3 className="font-primary font-serif italic text-white text-2xl sm:text-3xl md:text-4xl md:leading-snug">
-        “Talk is cheap. Show me the code.”
+      <h3 className="font-primary font-serif italic text-white text-2xl sm:text-3xl md:text-4xl md:leading-snug hover:text-rose-500 hover:underline hover:underline-offset-4">
+        <Link href="https://github.com/gauthierelcapitan">
+          <a target="_blank" rel="noopener noreferrer">
+            “Talk is cheap. Show me the code.”
+          </a>
+        </Link>
       </h3>
     </div>
   );
