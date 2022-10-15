@@ -2,7 +2,6 @@ import { SectionProps } from '@gauthiercart/components/sections/types';
 import aiguilleVerte from '@gauthiercart/public/images/aiguille-verte.jpg';
 import Image from 'next/image';
 import { FC, memo } from 'react';
-import { Parallax } from 'react-scroll-parallax';
 
 const Contact: FC<SectionProps> = ({ sectionRef }) => {
   return (
@@ -20,18 +19,15 @@ const Contact: FC<SectionProps> = ({ sectionRef }) => {
         placeholder="blur"
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
-        <Parallax speed={-5}>
-          <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
-            Contact
-          </h1>
-        </Parallax>
-        <Parallax speed={5}>
-          <div className="space-y-8">
-            <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
-              Call me maybe
-            </p>
-          </div>
-        </Parallax>
+        <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
+          Contact
+        </h1>
+
+        <div className="space-y-8">
+          <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
+            Call me maybe
+          </p>
+        </div>
       </div>
     </div>
   );

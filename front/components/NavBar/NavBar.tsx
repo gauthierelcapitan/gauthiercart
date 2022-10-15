@@ -24,7 +24,7 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
     <Container>
       <nav className="flex justify-around bg-white/10 backdrop-blur-sm shadow-sm w-full fixed top-0 left-0 right-0 z-10">
         <Disclosure>
-          {({ open }) => (
+          {({ open, close }) => (
             <>
               <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
                 <div className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
@@ -83,6 +83,11 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
                       key={label}
                       label={label}
                       sectionRef={sectionRef}
+                      onClick={() =>
+                        setTimeout(() => {
+                          close();
+                        }, 750)
+                      }
                     />
                   ))}
                 </div>
