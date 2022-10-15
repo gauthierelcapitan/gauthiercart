@@ -1,4 +1,4 @@
-import { SectionProps } from '@gauthiercart/components/Sections/types';
+import { SectionProps } from '@gauthiercart/components/sections/types';
 import aiguilleVerte from '@gauthiercart/public/images/aiguille-verte.jpg';
 import Image from 'next/image';
 import { FC, memo } from 'react';

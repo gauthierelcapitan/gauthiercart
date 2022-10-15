@@ -1,7 +1,7 @@
 import CloudyNoSSR from '@gauthiercart/components/Cloudy/CloudyNoSSR';
-import AboutDescription from '@gauthiercart/components/Sections/About/AboutDescription';
-import AboutPhoto from '@gauthiercart/components/Sections/About/AboutPhoto';
-import { SectionProps } from '@gauthiercart/components/Sections/types';
+import AboutDescription from '@gauthiercart/components/sections/About/AboutDescription';
+import AboutPhoto from '@gauthiercart/components/sections/About/AboutPhoto';
+import { SectionProps } from '@gauthiercart/components/sections/types';
 import aiguilleDuGouter from '@gauthiercart/public/images/aiguille-du-gouter.jpg';
 import Image from 'next/image';
 import { FC, memo } from 'react';

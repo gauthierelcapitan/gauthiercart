@@ -1,4 +1,4 @@
-import { SectionProps } from '@gauthiercart/components/Sections/types';
+import { SectionProps } from '@gauthiercart/components/sections/types';
 import deleveret from '@gauthiercart/public/images/deleveret.jpg';
 import Image from 'next/image';
 import { FC, memo } from 'react';
