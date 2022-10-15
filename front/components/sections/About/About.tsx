@@ -23,10 +23,8 @@ const About: FC<SectionProps> = ({ sectionRef }) => {
       />
       <CloudyNoSSR />
       <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
-        <div className="grid grid-cols-2 gap-4">
-          <AboutPhoto />
-          <AboutDescription />
-        </div>
+        <AboutPhoto />
+        <AboutDescription />
       </div>
     </div>
   );
