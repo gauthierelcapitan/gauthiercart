@@ -30,6 +30,7 @@ const AboutPhoto = () => {
                 alt="Gauthier Cart"
                 width={160}
                 height={160}
+                placeholder="blur"
               />
             </SwiperSlide>
             {[

@@ -4,7 +4,7 @@ import AboutPhoto from '@gauthiercart/components/sections/About/AboutPhoto';
 import { SectionProps } from '@gauthiercart/components/sections/types';
 import aiguilleDuGouter from '@gauthiercart/public/images/aiguille-du-gouter.jpg';
 import Image from 'next/image';
-import { FC, memo } from 'react';
+import { FC } from 'react';
 
 const About: FC<SectionProps> = ({ sectionRef }) => {
   return (
@@ -30,4 +30,4 @@ const About: FC<SectionProps> = ({ sectionRef }) => {
   );
 };
 
-export default memo(About);
+export default About;
