@@ -1,4 +1,4 @@
-import { SectionProps } from '@gauthiercart/components/sections/types';
+import { SectionProps } from '@gauthiercart/components/Sections/types';
 import dentDuGeant from '@gauthiercart/public/images/dent-du-geant.jpg';
 import Image from 'next/image';
 import { FC, memo } from 'react';

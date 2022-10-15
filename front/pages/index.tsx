@@ -1,9 +1,9 @@
 import Navbar from '@gauthiercart/components/NavBar/NavBar';
 import { NavbarItemProps } from '@gauthiercart/components/NavBar/NavBarItem';
-import About from '@gauthiercart/components/sections/About';
-import Contact from '@gauthiercart/components/sections/Contact';
-import Portfolio from '@gauthiercart/components/sections/Portfolio';
-import Skills from '@gauthiercart/components/sections/Skills';
+import About from '@gauthiercart/components/Sections/About/About';
+import Contact from '@gauthiercart/components/Sections/Contact';
+import Portfolio from '@gauthiercart/components/Sections/Portfolio';
+import Skills from '@gauthiercart/components/Sections/Skills';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRef } from 'react';
