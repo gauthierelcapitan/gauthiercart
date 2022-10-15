@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const AboutPhoto = () => {
   return (
-    <div className="flex flex-col justify-center items-center mx-auto">
+    <div className="flex flex-col justify-center items-center mx-auto mb-5">
       <div className="relative rounded-full border-rose-500 border-2 p-1.5">
         <div className="absolute rounded-full border-8 border-white w-40 h-40 bg-white/30 backdrop-blur" />
         <div className="-translate-y-2">

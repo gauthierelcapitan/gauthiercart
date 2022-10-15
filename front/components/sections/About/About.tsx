@@ -22,7 +22,7 @@ const About: FC<SectionProps> = ({ sectionRef }) => {
         placeholder="blur"
       />
       <CloudyNoSSR />
-      <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
+      <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-xl mx-auto text-center">
         <AboutPhoto />
         <AboutDescription />
       </div>
