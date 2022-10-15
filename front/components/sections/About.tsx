@@ -23,16 +23,20 @@ const About: FC<SectionProps> = ({ sectionRef }) => {
       />
       <CloudyNoSSR />
       <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
-        <div className="rounded-full bg-white/10 backdrop-blur border-4 border-rose-500 p-1">
+        <div className="relative rounded-full border-rose-500 border-2 pt-1.5 pr-1.5 pl-1.5">
+          <div className="absolute rounded-full border-12 border-white w-40 h-40 bg-white/30 backdrop-blur" />
           <Image
-            className="rounded-full"
+            className="rounded-full -translate-y-2"
             src={gauthierProfessional}
             quality={100}
             alt="Gauthier Cart"
             placeholder="blur"
-            width={150}
-            height={150}
+            width={160}
+            height={160}
           />
+          <div className="-translate-y-1.5">
+            <div className="absolute rounded-full border-white border-l-12 border-r-12 border-b-12 w-40 h-40 -translate-y-full" />
+          </div>
         </div>
         <Parallax speed={-10}>
           <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
