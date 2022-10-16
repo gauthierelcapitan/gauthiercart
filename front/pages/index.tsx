@@ -3,7 +3,7 @@ import { NavbarItemProps } from '@gauthiercart/components/NavBar/NavBarItem';
 import About from '@gauthiercart/components/sections/About/About';
 import Contact from '@gauthiercart/components/sections/Contact';
 import Portfolio from '@gauthiercart/components/sections/Portfolio';
-import Skills from '@gauthiercart/components/sections/Skills';
+import Skill from '@gauthiercart/components/sections/Skill/Skill';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useRef } from 'react';
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           <Navbar menuLeft={menuLeft} menuRight={menuRight} />
         </header>
         <About sectionRef={aboutRef} />
-        <Skills sectionRef={skillsRef} />
+        <Skill sectionRef={skillsRef} />
         <Portfolio sectionRef={portfolioRef} />
         <Contact sectionRef={contactRef} />
       </main>

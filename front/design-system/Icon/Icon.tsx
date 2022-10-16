@@ -3,21 +3,21 @@ import { ComponentType, ReactElement } from 'react';
 
 type IconVariant = 'iceAxe' | 'karabiner' | 'piranha' | 'quickdraw';
 
-export interface IconsProps {
+export interface IconProps {
   color?: string;
   height?: number;
   variant: IconVariant;
   width?: number;
 }
 
-const icons: { [variant in IconVariant]: ComponentType<IconsProps> } = {
+const icons: { [variant in IconVariant]: ComponentType<IconProps> } = {
   iceAxe: dynamic(() => import('./icons/IceAxe')),
   karabiner: dynamic(() => import('./icons/Karabiner')),
   piranha: dynamic(() => import('./icons/Piranha')),
   quickdraw: dynamic(() => import('./icons/Quickdraw')),
 };
 
-export const Icon = (props: IconsProps): ReactElement => {
+export const Icon = (props: IconProps): ReactElement => {
   const { variant, color = 'currentColor', height = 30, width = 40 } = props;
   if (typeof icons[variant] !== 'undefined') {
     const Icon = icons[variant];

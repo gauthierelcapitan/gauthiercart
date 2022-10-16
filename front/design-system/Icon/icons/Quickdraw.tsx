@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { IconsProps } from '../Icon';
+import { IconProps } from '../Icon';
 
-const Quickdraw: FC<IconsProps> = ({ color, height, width }) => {
+const Quickdraw: FC<IconProps> = ({ color, height, width }) => {
   return (
     <svg
       version="1.0"

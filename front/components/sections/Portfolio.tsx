@@ -25,7 +25,7 @@ const Portfolio: FC<SectionProps> = ({ sectionRef }) => {
 
         <div className="space-y-8">
           <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
-            UTMB World and UTMB Live
+            🚧 Under construction 🚧
           </p>
         </div>
       </div>

@@ -38,14 +38,14 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
                 </div>
                 <div className="flex justify-between items-center w-full md:w-auto cursor-pointer">
                   <div onClick={scrollToTop} className="w-12">
-                    <Icon variant="iceAxe" height={100} width={35} />
+                    <Icon variant="iceAxe" height={90} width={30} />
                   </div>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-white-500 focus:outline-none"
+                    className="px-2 py-1 ml-auto text-white rounded-md md:hidden focus:text-white-500 focus:outline-none"
                   >
                     <svg
-                      className="w-6 h-6 fill-current"
+                      className="w-8 h-8 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                     >

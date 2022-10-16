@@ -1,8 +1,8 @@
 import { FC } from 'react';
 
-import { IconsProps } from '../Icon';
+import { IconProps } from '../Icon';
 
-const Karabiner: FC<IconsProps> = ({ color, height, width }) => {
+const Karabiner: FC<IconProps> = ({ color, height, width }) => {
   return (
     <svg
       version="1.0"
