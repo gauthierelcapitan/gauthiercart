@@ -19,14 +19,14 @@ const Contact: FC<SectionProps> = ({ sectionRef }) => {
         placeholder="blur"
       />
       <div className="absolute inset-0 flex flex-col justify-center items-center w-5/6 max-w-lg mx-auto text-center">
-        <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug">
+        <h1 className="font-primary font-sans font-bold text-white text-3xl sm:text-4xl md:text-5xl md:leading-snug mb-4">
           Contact
         </h1>
 
         <div className="space-y-8">
-          <p className="font-secondary text-palette-light text-base md:text-lg lg:text-xl">
-            🚧 Under construction 🚧
-          </p>
+          <h2 className="font-mono text-palette-light text-base md:text-xl lg:text-2xl">
+            gauthier.cart[@]gmail.com
+          </h2>
         </div>
       </div>
     </div>
