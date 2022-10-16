@@ -37,7 +37,7 @@ const NavBar: FC<NavbarProps> = ({ menuLeft, menuRight }) => {
                   ))}
                 </div>
                 <div className="flex justify-between items-center w-full md:w-auto cursor-pointer">
-                  <div onClick={scrollToTop} className="w-12">
+                  <div onClick={scrollToTop} className="w-8">
                     <Icon variant="iceAxe" height={90} width={30} />
                   </div>
                   <Disclosure.Button
