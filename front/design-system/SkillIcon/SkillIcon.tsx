@@ -22,7 +22,10 @@ export type SkillIconVariant =
   | 'jetbrain'
   | 'html'
   | 'graphql'
-  | 'git';
+  | 'git'
+  | 'linkedin'
+  | 'github'
+  | 'twitter';
 
 export interface SkillIconProps {
   height?: number;
@@ -53,6 +56,9 @@ const icons: { [variant in SkillIconVariant]: ComponentType<SkillIconProps> } =
     html: dynamic(() => import('./icons/Html')),
     graphql: dynamic(() => import('./icons/GraphQL')),
     git: dynamic(() => import('./icons/Git')),
+    linkedin: dynamic(() => import('./icons/Linkedin')),
+    twitter: dynamic(() => import('./icons/Twitter')),
+    github: dynamic(() => import('./icons/Github')),
   };
 
 export const SkillIcon = (props: SkillIconProps): ReactElement => {
