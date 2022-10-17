@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 
 import gauthierProfessional from '@gauthiercart/public/images/gauthier-professional.png';
 import Image from 'next/image';
-import { Autoplay, EffectFlip } from 'swiper';
+import { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const AboutPhoto = () => {
@@ -15,13 +15,13 @@ const AboutPhoto = () => {
         <div className="absolute rounded-full border-8 border-white w-40 h-40 bg-white/30 backdrop-blur" />
         <div className="-translate-y-2">
           <Swiper
-            modules={[EffectFlip, Autoplay]}
+            modules={[Autoplay]}
             className="about-swiper"
+            loop={true}
             autoplay={{
-              delay: 4000,
+              delay: 2000,
               disableOnInteraction: false,
             }}
-            effect={'flip'}
           >
             <SwiperSlide>
               <Image

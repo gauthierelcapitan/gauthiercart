@@ -32,16 +32,6 @@ const AboutDescription = () => {
           </div>
         </div>
       </Parallax>
-
-      <Parallax translateY={['-100px', '300px']}>
-        <h3 className="font-primary font-serif italic text-white text-2xl sm:text-3xl md:text-4xl md:leading-snug hover:text-rose-500 hover:underline hover:underline-offset-4 hover:bg-white">
-          <Link href="https://github.com/gauthierelcapitan">
-            <a target="_blank" rel="noopener noreferrer">
-              “Talk is cheap. Show me the code.”
-            </a>
-          </Link>
-        </h3>
-      </Parallax>
     </div>
   );
 };
